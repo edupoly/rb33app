@@ -20,12 +20,12 @@ function App() {
   }
   return (
     <div className="border border-2 border-danger p-2 ">
-      <h1>App</h1>
+      {/* <h1>App</h1>
       <h2>Counter:{c}</h2>
       <button onClick={()=>{inc()}}>Increment</button>
-      <button onClick={()=>{dec()}}>Decrement</button>
+      <button onClick={()=>{dec()}}>Decrement</button> */}
       <Todolist></Todolist>
-      <AnotherChild a1={p} f1={thoppas}></AnotherChild>
+      {/* <AnotherChild a1={p} f1={thoppas}></AnotherChild> */}
     </div>
   );
 }
