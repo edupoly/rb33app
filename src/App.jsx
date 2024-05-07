@@ -22,8 +22,8 @@ export default App;
   (oldcomponents) -------> newcomponents with added functionality
   hooks
 
-  Smart Components
+  Smart Components(Container Components)(uncontrolled components)
     logic
-  Dumb Components
+  Dumb Components(Presentational Components)(controlled components)
     only UI
 */
