@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { addToCart } from './store/actions'
 
 function Products(props) {
   console.log("Products rendered")
@@ -21,13 +22,17 @@ function Products(props) {
     </div>
   )
 }
-
-export default connect(function(state){
+function mapStateToProps(state){
   return state.productsReducer
-},function(dispatch){
+}
+function mapDispatchToProps(dispatch){
   return {
     addToCart:(product)=>{
-      dispatch({type:"ADDTOCART",payload:product})
+      dispatch(addToCart(product))
     }
   }
-})(Products)
+}
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+,)(Products)
