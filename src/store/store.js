@@ -1,4 +1,5 @@
-import { createStore } from "redux";
+import { createStore,applyMiddleware } from "redux";
 import reducer from "./reducer";
-var store = createStore(reducer);
+import {thunk} from 'redux-thunk'
+var store = createStore(reducer,applyMiddleware(thunk));
 export default store;

@@ -4,17 +4,14 @@ import Counter from './Counter';
 import Todolist from './Todolist';
 import Products from './Products';
 import { connect } from 'react-redux';
+import Header from './Header';
+import { Outlet } from 'react-router-dom';
 
 function App(props) {
   return (
     <div className='border border-2 border-danger m-2 p-2'>
-      <h1>
-        Cart:{props.productsReducer.cart.length}
-
-      </h1>
-      <Products></Products>
-      <Todolist></Todolist>
-      <Counter></Counter>
+      <Header></Header>
+      <Outlet></Outlet>
     </div>
   );
 }

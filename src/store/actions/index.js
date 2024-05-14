@@ -1,3 +1,5 @@
+import axios from 'axios'
+
 export function addTodo(newtodo){
     return {type:'ADDTODO',payload:newtodo}
 }
@@ -11,4 +13,14 @@ export function incrementCounter(){
 }
 export function decrementCounter(){
     return {type:'DECREMENT'}
+}
+
+export function getAllCountries(){
+    return (dispatch)=>{
+        dispatch({type:'UPDATELOADING',payload:true})
+        axios.get("https://restcountries.com/v3/all")
+        .then((res)=>{
+            return dispatch({type:'LOADCOUNTRIES',payload:res.data})
+        })
+    }
 }

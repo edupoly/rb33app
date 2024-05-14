@@ -5,7 +5,7 @@ import { addToCart } from './store/actions'
 function Products(props) {
   console.log("Products rendered")
   return (
-    <div className='border border-2 border-warning m-2 p-2' style={{height:"200px",overflow:'scroll'}}>
+    <div className='border border-2 border-warning m-2 p-2'>
         <h1>Products</h1>
         <ul className='d-flex flex-wrap'>
             {
