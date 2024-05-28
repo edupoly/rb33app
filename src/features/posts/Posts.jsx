@@ -19,6 +19,8 @@ function Posts() {
     useEffect(()=>{
         lazyGetAllPostsFn()
     },[])
+    console.log("Posts ",isLoading)
+    console.log("Posts ",data)
   return (
     <div>
             <h1>

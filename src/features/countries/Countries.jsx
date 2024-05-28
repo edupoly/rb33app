@@ -13,6 +13,8 @@ function Countries() {
             dispatch(updateCoutries(data))
         }
     },[isLoading])
+    console.log(isLoading)
+    console.log(data)
     console.log(countries)
   return (
     <div>

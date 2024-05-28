@@ -12,8 +12,6 @@ function App() {
   return (
     <div className="border border-2 border-warning m-2 p-2'">
       <Header></Header>
-      <h1>App</h1>
-
       <Outlet></Outlet>
     </div>
   );

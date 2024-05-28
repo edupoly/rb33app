@@ -15,11 +15,19 @@ import Countries from './features/countries/Countries';
 import Posts from './features/posts/Posts';
 import AddPost from './features/posts/AddPost';
 import EditPost from './features/posts/EditPost';
+import CRMDashboard from './features/crm/CRMDashboard';
+import Home from './features/shared/Home';
+import CRMHome from './features/crm/CRMHome';
+import AddContactForm from './features/crm/AddContactForm';
   const router = createBrowserRouter([
     {
       path: "/",
       element: <App></App>,
       children:[
+        {
+          path:"/",
+          element:<Home></Home>
+        },
         {
             path: "/todolist",
             element: <Todolist></Todolist>,
@@ -43,6 +51,20 @@ import EditPost from './features/posts/EditPost';
         {
             path: "/editpost",
             element: <EditPost></EditPost>
+        },
+        {
+          path:'/crm',
+          element:<CRMDashboard></CRMDashboard>,
+          children:[
+            {
+              path:"/crm",
+              element:<CRMHome></CRMHome>
+            },
+            {
+              path:"/crm/addContact",
+              element:<AddContactForm></AddContactForm>
+            }
+          ]
         }
       ]
     },
